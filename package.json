@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "ts-node-dev server.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migration": "ts-node-dev infra/dynamo/migrations/create-auto-insurance"
   },
   "author": "",
   "license": "ISC",
