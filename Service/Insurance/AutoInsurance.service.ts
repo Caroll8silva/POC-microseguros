@@ -7,11 +7,13 @@ const repository = container.resolve(AutoInsuranceRepository);
 
 @autoInjectable()
 export class AutoInsuranceService implements IAutoInsuranceService {
-  
-    async create(data: AutoInsuranceModel): Promise<AutoInsuranceModel> {
+  async create(data: AutoInsuranceModel): Promise<AutoInsuranceModel> {
     const result = await repository.create(data);
     return result;
   }
+
+  async findAll(): Promise<AutoInsuranceModel[]> {
+    const result = await repository.findAll();
+    return result;
+  }
 }
-
-

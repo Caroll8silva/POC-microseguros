@@ -1,3 +1,3 @@
 export interface AutoInsuranceModel {
-  teste: string;
+  id: string;
 }

@@ -1,5 +1,6 @@
 import { AutoInsuranceModel } from "../../Models/Insurance.model";
 
-export interface IAutoInsuranceService { 
-    create(data: AutoInsuranceModel): Promise<AutoInsuranceModel> 
+export interface IAutoInsuranceService {
+  create(data: AutoInsuranceModel): Promise<AutoInsuranceModel>;
+  findAll(): Promise<AutoInsuranceModel[]>;
 }

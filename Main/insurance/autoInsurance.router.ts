@@ -7,8 +7,9 @@ import "../../Utils/containers/autoInsurance.container";
 const router = Router();
 const prefix = "/seguros";
 
-
 const controller = container.resolve(AutoInsuranceController);
+
 router.post(`${prefix}`, controller.create);
+router.get(`${prefix}`, controller.findAll);
 
 export { router };
