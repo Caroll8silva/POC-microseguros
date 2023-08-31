@@ -35,4 +35,20 @@ export class AutoInsuranceRepository implements IAutoInsuranceRepository {
       throw new Error(MessageError.FIND_INSURANCE_ERROR);
     }
   }
+
+  async update(id: string): Promise<void> {
+    try {
+      const params = {
+        TableName,
+        Key: {
+          id: `${id}`,
+        },
+      };
+
+      await DynamoDocumentClient.update(params).promise();
+    } catch (error) {
+      throw new Error(MessageError.UPDATE_INSURANCE_ERROR);
+
+    }
+  }
 }

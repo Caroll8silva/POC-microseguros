@@ -16,4 +16,8 @@ export class AutoInsuranceService implements IAutoInsuranceService {
     const result = await repository.findAll();
     return result;
   }
+
+  async update(id: string): Promise<void> {
+    await repository.update(id);
+  }
 }
