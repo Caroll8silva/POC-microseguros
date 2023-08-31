@@ -6,7 +6,7 @@ import { IAutoInsuranceController } from "../../Utils/interfaces/IAutoInsuranceC
 const service = container.resolve(AutoInsuranceService);
 
 @autoInjectable()
-class AutoInsuranceController implements IAutoInsuranceController {
+export class AutoInsuranceController implements IAutoInsuranceController {
   async create(req: Request, res: Response) {
     try {
       const data = req.body;
@@ -37,5 +37,15 @@ class AutoInsuranceController implements IAutoInsuranceController {
       res.status(400).json(error);
     }
   }
+
+  async delete(req: Request, res: Response) {
+    try {
+      const { id } = req.params;
+
+      await service.delete(id);
+      return res.status(204);
+    } catch (error) {
+      res.status(400).json(error);
+    }
+  }
 }
-export { AutoInsuranceController };

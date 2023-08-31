@@ -11,5 +11,7 @@ const controller = container.resolve(AutoInsuranceController);
 
 router.post(`${prefix}`, controller.create);
 router.get(`${prefix}`, controller.findAll);
+router.put(`${prefix}/:id`, controller.update);
+router.delete(`${prefix}/:id`, controller.delete);
 
 export { router };

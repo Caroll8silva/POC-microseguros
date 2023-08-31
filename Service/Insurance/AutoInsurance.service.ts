@@ -20,4 +20,8 @@ export class AutoInsuranceService implements IAutoInsuranceService {
   async update(id: string): Promise<void> {
     await repository.update(id);
   }
+
+  async delete(id: string): Promise<void> {
+    await repository.delete(id);
+  }
 }

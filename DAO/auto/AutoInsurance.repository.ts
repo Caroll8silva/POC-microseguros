@@ -51,4 +51,19 @@ export class AutoInsuranceRepository implements IAutoInsuranceRepository {
 
     }
   }
+  async delete(id: string): Promise<void> {
+    try {
+      const params = {
+        TableName,
+        Key: {
+          id: `${id}`,
+        },
+      };
+
+      await DynamoDocumentClient.delete(params).promise();
+    } catch (error) {
+      throw new Error(MessageError.UPDATE_INSURANCE_ERROR);
+
+    }
+  }
 }
