@@ -6,3 +6,12 @@ export enum MessageError {
   UPDATE_INSURANCE_ERROR = "An error occurred while updating data",
   DELETE_INSURANCE_ERROR = "An error ocurred while deleting insurance",
 }
+
+export enum genericErrorCode {
+  SERVER_ERROR = 500,
+  BAD_REQUEST = 400
+}
+
+export enum genericErrorMessage {
+  SERVER_ERROR = "Internal Server Error",
+}
