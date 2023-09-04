@@ -2,11 +2,11 @@ import dotenv from "dotenv";
 
 import { dynamoDB } from "../config";
 import { MessageError } from "../../../Utils/errors/errorMessages.enum";
+import { env } from "../../envVars";
 
-dotenv.config();
 
 const params = {
-  TableName: `${process.env.AUTO_INSURANCE_TABLE}`,
+  TableName: `${env.AUTO_INSURANCE_TABLE}`,
   AttributeDefinitions: [{ AttributeName: "id", AttributeType: "S" }],
   KeySchema: [{ AttributeName: "id", KeyType: "HASH" }],
   ProvisionedThroughput: {
