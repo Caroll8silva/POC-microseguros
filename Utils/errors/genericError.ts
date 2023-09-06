@@ -1,4 +1,4 @@
-import { genericErrorCode, genericErrorMessage } from "./errorMessages.enum";
+import { genericErrorCode, genericErrorMessage } from "../enums/errorMessages.enum";
 
 export const genericError = (error: any) => {
   const { code, message } = error;

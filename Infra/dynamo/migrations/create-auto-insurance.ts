@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 
 import { dynamoDB } from "../config";
-import { MessageError } from "../../../Utils/errors/errorMessages.enum";
+import { MessageError } from "../../../Utils/enums/errorMessages.enum";
 import { env } from "../../envVars";
 
 

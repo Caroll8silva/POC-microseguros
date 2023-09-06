@@ -1,5 +1,4 @@
 import { FormattedAutoInsuranceModel } from "../../Models/Insurance.model";
-import { MessageError } from "../../Utils/errors/errorMessages.enum";
 import { DynamoDocumentClient } from "../../Infra/dynamo/config";
 import { IAutoInsuranceRepository } from "../../Utils/interfaces/IAutoInsuranceRepository.interface";
 
