@@ -14,7 +14,7 @@ export const createAutoInsuranceSchema = (
       description: Joi.string().trim().required(),
       value: Joi.number().required(),
       company: Joi.string().trim().required(),
-      product_id: Joi.string().trim().required(),
+      user_id: Joi.string().trim().required(),
     });
 
     const options = {
