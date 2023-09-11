@@ -1,18 +1,12 @@
 import { env } from "../../envVars";
-import { container } from "tsyringe";
 import { DynamoTable } from ".";
+import { container } from "tsyringe";
 import { DynamoParamsData } from "../../../Models/dynamo.model";
 
 const params: DynamoParamsData = {
-  TableName: `${env.AUTO_INSURANCE_TABLE}`,
-  AttributeDefinitions: [
-    { AttributeName: "id", AttributeType: "S" },
-    { AttributeName: "user_id", AttributeType: "S" },
-  ],
-  KeySchema: [
-    { AttributeName: "id", KeyType: "HASH" },
-    { AttributeName: "user_id", KeyType: "RANGE" },
-  ],
+  TableName: `${env.USER_TABLE}`,
+  AttributeDefinitions: [{ AttributeName: "id", AttributeType: "S" }],
+  KeySchema: [{ AttributeName: "id", KeyType: "HASH" }],
   ProvisionedThroughput: {
     ReadCapacityUnits: 5,
     WriteCapacityUnits: 5,

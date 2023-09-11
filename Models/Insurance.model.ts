@@ -4,7 +4,7 @@ export interface AutoInsuranceModel {
   description: string;
   value: number;
   company: string;
-  product_id: string;
+  user_id: string;
 }
 
 export interface FormattedAutoInsuranceModel {
@@ -16,6 +16,6 @@ export interface FormattedAutoInsuranceModel {
   company: string;
   createdAt: string;
   updatedAt: string;
-  product_id: string;
+  user_id: string;
 }
 

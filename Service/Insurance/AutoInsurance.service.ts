@@ -41,7 +41,7 @@ export class AutoInsuranceService implements IAutoInsuranceService {
       company: data.company,
       createdAt: currentDate,
       updatedAt: currentDate,
-      product_id: "test",
+      user_id: "test",
     };
   }
 }

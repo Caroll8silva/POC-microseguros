@@ -19,7 +19,7 @@ export class AutoInsuranceRepository implements IAutoInsuranceRepository {
         company: data.company,
         createdAt: data.createdAt,
         updatedAt: data.updatedAt,
-        product_id: data.product_id,
+        user_id: data.user_id,
       },
     };
 

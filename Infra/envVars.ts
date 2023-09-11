@@ -7,5 +7,7 @@ export const env: EnvVars = {
   PORT: process.env.PORT!,
   AWS_REGION: process.env.AWS_REGION!,
   AUTO_INSURANCE_TABLE: process.env.AUTO_INSURANCE_TABLE!,
+  USER_TABLE: process.env.USER_TABLE!,
   DYNAMODB_ENDPOINT: process.env.DYNAMODB_ENDPOINT!,
+
 };
